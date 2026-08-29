@@ -1,0 +1,21 @@
+{
+  "name": "tracked-event-target",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tracked-event-target.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesRobertHugginsNgo/tracked-event-target.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JamesRobertHugginsNgo/tracked-event-target/issues"
+  },
+  "homepage": "https://github.com/JamesRobertHugginsNgo/tracked-event-target#readme"
+}
