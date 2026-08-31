@@ -13,7 +13,7 @@ export default class TrackedEventTarget extends EventTarget {
 		super.removeEventListener(type, capturedListener ?? listener, options);
 	}
 
-	hasDispatchEventListeners(type) {
+	canDispatch(type) {
 		return this._tracker.has(type);
 	}
 }

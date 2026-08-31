@@ -9,7 +9,7 @@ describe('tracked-event-target.test.js', () => {
 		const trackedEventTarget = new TrackedEventTarget();
 
 		assert.ok(trackedEventTarget._tracker instanceof EventListenerTracker);
-		assert.equal(trackedEventTarget.hasDispatchEventListeners('change'), false);
+		assert.equal(trackedEventTarget.canDispatch('change'), false);
 	});
 
 	test('add event listener', () => {
@@ -19,7 +19,7 @@ describe('tracked-event-target.test.js', () => {
 		trackedEventTarget.addEventListener('change', listener);
 		trackedEventTarget.dispatchEvent(new CustomEvent('change', { detail: {} }));
 
-		assert.strictEqual(trackedEventTarget.hasDispatchEventListeners('change'), true);
+		assert.strictEqual(trackedEventTarget.canDispatch('change'), true);
 		assert.strictEqual(listener.mock.calls.length, 1);
 	});
 
@@ -30,7 +30,7 @@ describe('tracked-event-target.test.js', () => {
 		trackedEventTarget.addEventListener('change', listener, { once: true });
 		trackedEventTarget.dispatchEvent(new CustomEvent('change', { detail: {} }));
 
-		assert.strictEqual(trackedEventTarget.hasDispatchEventListeners('change'), false);
+		assert.strictEqual(trackedEventTarget.canDispatch('change'), false);
 		assert.strictEqual(listener.mock.calls.length, 1);
 	});
 
@@ -42,7 +42,7 @@ describe('tracked-event-target.test.js', () => {
 		trackedEventTarget.removeEventListener('change', listener);
 		trackedEventTarget.dispatchEvent(new CustomEvent('change', { detail: {} }));
 
-		assert.equal(trackedEventTarget.hasDispatchEventListeners('change'), false);
+		assert.equal(trackedEventTarget.canDispatch('change'), false);
 		assert.equal(listener.mock.calls.length, 0);
 	});
 
@@ -54,6 +54,6 @@ describe('tracked-event-target.test.js', () => {
 		trackedEventTarget.addEventListener('change', listener, { capture: true });
 		trackedEventTarget.removeEventListener('change', listener, { capture: true });
 
-		assert.equal(trackedEventTarget.hasDispatchEventListeners('change'), true);
+		assert.equal(trackedEventTarget.canDispatch('change'), true);
 	});
 });
