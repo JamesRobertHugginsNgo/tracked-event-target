@@ -1,8 +1,8 @@
 // source: https://github.com/JamesRobertHugginsNgo/event-listener-tracker/blob/1.0.1/src/event-listener-tracker.js
 
 // ls-remote repository: https://github.com/JamesRobertHugginsNgo/event-listener-tracker.git
-// ls-remote release: refs/heads/release/1
-// ls-remote release sha: d19ad5dc855afadfc826af8102eff5cbb88e9b45
+// ls-remote branch: refs/heads/1x
+// ls-remote branch sha: d19ad5dc855afadfc826af8102eff5cbb88e9b45
 
 function normalizeOptions(options) {
 	return options === null
