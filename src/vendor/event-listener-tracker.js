@@ -1,7 +1,7 @@
 // @source: https://github.com/JamesRobertHugginsNgo/event-listener-tracker/blob/1.0.1/src/event-listener-tracker.js
 
 // @vendor-repo: https://github.com/JamesRobertHugginsNgo/event-listener-tracker.git
-// @vendor-target: refs/heads/vendor/1.x
+// @vendor-branch: refs/heads/vendor/1.x
 // @vendor-sha: d19ad5dc855afadfc826af8102eff5cbb88e9b45
 
 function normalizeOptions(options) {
